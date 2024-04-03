@@ -1,0 +1,19 @@
+.logo {
+    padding: 3px 5px;
+    border-radius: var(--rounded);
+    transition:
+        box-shadow var(--transition),
+        opacity var(--transition);
+
+    &:focus {
+        box-shadow: 0 0 0 2px var(--color-white);
+    }
+
+    @include hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}

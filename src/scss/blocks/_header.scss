@@ -1,11 +1,40 @@
 .header {
-    background-color: rgb(163, 188, 193);
+    background-color: var(--color-black);
 
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 15px;
-        padding: 10px 0;
+        padding: 23px 0;
+    }
+
+    &__search {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--rounded);
+        transition: box-shadow var(--transition);
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-white);
+        }
+
+        @include hover {
+            .header__search-icon {
+                fill: var(--color-accent);
+            }
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &__search-icon {
+        fill: var(--color-white);
+        transition: fill var(--transition);
     }
 }

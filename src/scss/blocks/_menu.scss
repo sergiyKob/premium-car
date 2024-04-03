@@ -1,26 +1,52 @@
 .menu {
+    color: var(--color-white);
     font-weight: 500;
     z-index: 100;
+
     &__list {
         display: flex;
         align-items: center;
-        gap: 40px;
+        justify-content: space-between;
+        gap: 20px;
+
         @include mq("tablet") {
             display: block;
             text-align: right;
             padding: 80px 0;
         }
     }
+
     &__link {
+        padding: 5px 15px;
+        border-radius: var(--rounded);
+        transition:
+            color var(--transition),
+            opacity var(--transition),
+            box-shadow var(--transition);
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-white);
+        }
+
+        @include hover {
+            color: var(--color-accent);
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+
         @include mq("tablet") {
             display: inline-block;
             width: 100%;
             padding: 20px;
         }
     }
+
     &__link--active {
         color: var(--color-accent);
     }
+
     @include mq("tablet") {
         display: block;
         position: fixed;
@@ -32,6 +58,7 @@
         font-size: 32px;
         overflow: auto;
         transition: right 0.4s ease-in-out;
+
         &.is-open {
             right: 0px;
         }
