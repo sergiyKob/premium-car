@@ -1,0 +1,60 @@
+.burger {
+    display: none;
+
+    @include mq("tablet") {
+        display: block;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--burger-border-radius);
+        transition: box-shadow 0.2s;
+
+        &:focus {
+            box-shadow: 0px 0px 0px var(--burger-focus-stroke-width) var(--burger-color-focus);
+        }
+
+        &__line {
+            position: absolute;
+            background-color: var(--burger-color);
+            width: var(--burger-line-width);
+            height: var(--burger-line-height);
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: transform 0.2s;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: var(--burger-color);
+                width: var(--burger-line-width);
+                height: var(--burger-line-height);
+                right: 0;
+                transition: 0.2s;
+            }
+
+            &::before {
+                top: 10px;
+            }
+
+            &::after {
+                bottom: 10px;
+            }
+        }
+
+        &.is-active .burger__line {
+            background-color: transparent;
+        }
+
+        &.is-active .burger__line::before {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        &.is-active .burger__line::after {
+            transform: rotate(45deg);
+            bottom: 0;
+        }
+    }
+}

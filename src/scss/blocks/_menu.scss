@@ -1,0 +1,39 @@
+.menu {
+    font-weight: 500;
+    z-index: 100;
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        @include mq("tablet") {
+            display: block;
+            text-align: right;
+            padding: 80px 0;
+        }
+    }
+    &__link {
+        @include mq("tablet") {
+            display: inline-block;
+            width: 100%;
+            padding: 20px;
+        }
+    }
+    &__link--active {
+        color: var(--color-accent);
+    }
+    @include mq("tablet") {
+        display: block;
+        position: fixed;
+        top: 64px;
+        right: -200%;
+        height: 100%;
+        width: 100%;
+        background-color: silver;
+        font-size: 32px;
+        overflow: auto;
+        transition: right 0.4s ease-in-out;
+        &.is-open {
+            right: 0px;
+        }
+    }
+}

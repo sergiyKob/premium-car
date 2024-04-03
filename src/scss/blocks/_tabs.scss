@@ -1,0 +1,37 @@
+.tabs {
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &__item {
+    }
+    &__btn {
+        font-weight: 500;
+        padding: 5px 10px;
+        transition:
+            box-shadow 0.2s,
+            color 0.2s,
+            opacity 0.2s;
+        &:focus {
+            box-shadow: 0 0 0 2px rgba(235, 87, 87, 0.6);
+        }
+        @include hover {
+            color: rgba(235, 87, 87, 1);
+            box-shadow: 0 0 0 2px rgba(235, 87, 87, 0.6);
+        }
+        &:active {
+            opacity: 0.7;
+        }
+    }
+    &__btn--active {
+        color: rgba(235, 87, 87, 1);
+        box-shadow: 0 2px 0 0 rgba(235, 87, 87, 1);
+    }
+    &__content {
+        display: none;
+    }
+    &__content--active {
+        display: block;
+    }
+}

@@ -1,0 +1,142 @@
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    line-height: var(--line-height);
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+
+    &.dark {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    flex-grow: 0;
+}
+
+.main {
+    flex-grow: 1;
+    padding-top: 60px; // відступ на висоту фіксованого хедера
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+.container-right {
+    padding-left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+
+    @include mq("desktop") {
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+    }
+}
+
+.container-left {
+    padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+
+    @include mq("desktop") {
+        padding-right: var(--container-padding);
+        padding-left: var(--container-padding);
+    }
+}
+
+.header--fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    z-index: 100;
+}
+
+.hidden-scrollbar {
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+.custom-scrollbar {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        background-color: gray;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        background-color: #f9f9fd;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    background-color: var(--color-black-40);
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition:
+        opacity var(--transition),
+        visibility var(--transition);
+
+    &.overlay--active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
