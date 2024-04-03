@@ -1,0 +1,39 @@
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__link {
+        width: 34px;
+        height: 34px;
+        background-color: var(--color-gray-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--rounded);
+        transition:
+            box-shadow var(--transition),
+            opacity var(--transition),
+            fill var(--transition);
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-white)
+        }
+
+        @include hover {
+            .social__link-icon {
+                fill: var(--color-accent);
+            }
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
+
+    &__link-icon {
+        fill: var(--color-white);
+        transition: fill var(--transition);
+    }
+}

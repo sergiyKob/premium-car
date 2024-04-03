@@ -1,0 +1,64 @@
+.recent-post {
+    display: grid;
+    grid-template-columns: 95px 180px;
+    grid-template-rows: 50% auto;
+    column-gap: 20px;
+
+    &__img {
+        grid-row: span 2;
+        border-radius: var(--rounded);
+    }
+
+    &__title {
+        color: var(--color-white);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.7;
+        transition:
+            color var(--transition),
+            opacity var(--transition);
+
+        @include hover {
+            color: var(--color-accent);
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
+    &__link {
+        @include line-clamp(2);
+        border-radius: var(--rounded);
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-white);
+        }
+    }
+
+    &__info {
+        align-self: center;
+        color: var(--color-gray-2);
+        font-style: italic;
+    }
+
+    &__author {
+        transition:
+            color var(--transition),
+            box-shadow var(--transition);
+        border-radius: var(--rounded);
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-gray-2);
+        }
+
+        @include hover {
+            color: var(--color-accent);
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
+}

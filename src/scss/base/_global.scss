@@ -140,3 +140,53 @@ body {
         visibility: visible;
     }
 }
+
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-white);
+    border-radius: var(--rounded);
+    text-align: center;
+    width: 100%;
+    padding: 18px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__input {
+        width: 100%;
+        background-color: var(--color-gray-3);
+        color: var(--color-white);
+        padding: 16px;
+        line-height: 1;
+        border-radius: var(--rounded);
+        transition: box-shadow var(--transition);
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-white)
+        }
+    }
+
+    &__btn {
+        background-color: #232323;
+        transition:
+            box-shadow var(--transition),
+            opacity var(--transition);
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-white)
+        }
+
+        @include hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+}
