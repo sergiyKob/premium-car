@@ -146,10 +146,26 @@ body {
     font-weight: 700;
     line-height: 1;
     color: var(--color-white);
+    background-color: var(--color-gray-5);
     border-radius: var(--rounded);
     text-align: center;
     width: 100%;
     padding: 18px;
+    transition:
+        box-shadow var(--transition),
+        opacity var(--transition);
+
+    &:focus {
+        box-shadow: 0 0 0 2px var(--color-black-40)
+    }
+
+    @include hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
 }
 
 .form {
@@ -172,11 +188,6 @@ body {
     }
 
     &__btn {
-        background-color: #232323;
-        transition:
-            box-shadow var(--transition),
-            opacity var(--transition);
-
         &:focus {
             box-shadow: 0 0 0 2px var(--color-white)
         }

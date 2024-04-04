@@ -1,0 +1,32 @@
+.first-post {
+    margin-bottom: 60px;
+
+    &__img {
+        border-radius: var(--rounded-md);
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__link {
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-dark);
+
+        }
+    }
+
+    &__info {
+        font-style: italic;
+        color: var(--color-gray-4);
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        @include line-clamp(3);
+        margin-bottom: 20px;
+    }
+
+    &__btn {}
+}
