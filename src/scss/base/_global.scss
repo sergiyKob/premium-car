@@ -263,3 +263,28 @@ body {
         opacity: 0.8;
     }
 }
+
+.tag {
+    display: inline-block;
+    border-radius: var(--rounded);
+    background-color: var(--color-gray);
+    line-height: 1;
+    padding: 8px 15px;
+    transition:
+        box-shadow var(--transition),
+        background-color var(--transition),
+        opacity var(--transition);
+
+    &:focus {
+        box-shadow: 0 0 0 2px var(--color-dark);
+    }
+
+    @include hover {
+        background-color: var(--color-gray-2);
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+
+}

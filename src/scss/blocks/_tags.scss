@@ -1,0 +1,13 @@
+.tags {
+    margin-bottom: 60px;
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
