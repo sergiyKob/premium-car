@@ -1,0 +1,27 @@
+.instagram {
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__img {
+        border-radius: var(--rounded);
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__btn-icon {
+        fill: var(--color-white);
+    }
+}
