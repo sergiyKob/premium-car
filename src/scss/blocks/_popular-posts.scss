@@ -1,0 +1,13 @@
+.popular-posts {
+    margin-bottom: 60px;
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.card-popular {
+    position: relative;
+
+    &__category,
+    &__link,
+    &__author {
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-dark);
+
+        }
+    }
+
+    &__category {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+
+    &__img {
+        border-radius: var(--rounded-md);
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        @include line-clamp(2);
+    }
+
+    &__info {
+        font-style: italic;
+        color: var(--color-gray-4);
+    }
+}
