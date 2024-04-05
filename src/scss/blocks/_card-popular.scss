@@ -1,5 +1,6 @@
 .card-popular {
     position: relative;
+    max-width: 270px;
 
     @include mq('tablet-sm') {
         width: 270px;

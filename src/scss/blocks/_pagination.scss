@@ -3,6 +3,20 @@
     align-items: center;
     gap: 10px;
 
+    @include mq('desktop-lg') {}
+
+    @include mq('desktop') {}
+
+    @include mq('tablet') {
+        justify-content: center;
+    }
+
+    @include mq('tablet-sm') {}
+
+    @include mq('mobile') {
+        gap: 5px;
+    }
+
     &__link {
         width: 40px;
         height: 40px;

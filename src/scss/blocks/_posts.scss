@@ -7,6 +7,7 @@
 
         @include mq('tablet-sm') {
             display: block;
+            margin-bottom: 30px;
         }
     }
 
@@ -18,16 +19,16 @@
         }
 
         @include mq('tablet-sm') {
-            margin-bottom: 30px;
-        }
-
-        @include mq('mobile') {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
     }
 
     &__list {
         margin-bottom: 65px;
+
+        @include mq('tablet-sm') {
+            margin-bottom: 30px;
+        }
     }
 
     &__item {
