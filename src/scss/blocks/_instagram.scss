@@ -10,6 +10,15 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         margin-bottom: 10px;
+
+        @include mq('tablet-sm') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 15px;
+        }
+
+        @include mq('mobile') {}
     }
 
     &__img {

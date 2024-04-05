@@ -1,7 +1,7 @@
 .burger {
     display: none;
 
-    @include mq("tablet") {
+    @include mq("tablet-sm") {
         display: block;
         position: relative;
         width: 44px;

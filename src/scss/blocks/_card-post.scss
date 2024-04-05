@@ -18,6 +18,15 @@
         box-shadow: 0 3px 10px 0 var(--color-black-10);
         border-radius: var(--rounded-md);
         background-color: var(--color-white);
+
+        @include mq('tablet-sm') {
+            padding: 20px;
+        }
+
+        @include mq('mobile') {
+            bottom: -55px;
+            padding: 15px;
+        }
     }
 
     &__category,
@@ -30,10 +39,18 @@
 
     &__category {
         margin-bottom: 20px;
+
+        @include mq('tablet-sm') {
+            margin-bottom: 10px;
+        }
     }
 
     &__title {
         margin-bottom: 15px;
+
+        @include mq('tablet-sm') {
+            margin-bottom: 5px;
+        }
     }
 
     &__link {
@@ -46,11 +63,24 @@
         font-style: italic;
         color: var(--color-gray-4);
         margin-bottom: 15px;
+
+        @include mq('tablet-sm') {
+            margin-bottom: 5px;
+        }
+
+        @include mq('mobile') {
+            margin-bottom: 0;
+
+        }
     }
 
     &__text {
         @include line-clamp(3);
         color: var(--color-gray-4);
         line-height: 1.7;
+
+        @include mq('mobile') {
+            display: none;
+        }
     }
 }

@@ -1,6 +1,10 @@
 .card-popular {
     position: relative;
 
+    @include mq('tablet-sm') {
+        width: 270px;
+    }
+
     &__category,
     &__link,
     &__author {

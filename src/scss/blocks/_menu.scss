@@ -3,16 +3,33 @@
     font-weight: 500;
     z-index: 100;
 
+    @include mq("tablet-sm") {
+        display: block;
+        position: fixed;
+        top: 64px;
+        right: -200%;
+        height: calc(100% - 64px);
+        width: 100%;
+        padding: 50px 10px;
+        background-color: silver;
+        font-size: 32px;
+        overflow: auto;
+        transition: right 0.4s ease-in-out;
+
+        &.is-open {
+            right: 0px;
+        }
+    }
+
     &__list {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
 
-        @include mq("tablet") {
+        @include mq("tablet-sm") {
             display: block;
-            text-align: right;
-            padding: 80px 0;
+            text-align: center;
         }
     }
 
@@ -23,6 +40,12 @@
             color var(--transition),
             opacity var(--transition),
             box-shadow var(--transition);
+
+        @include mq("tablet-sm") {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+        }
 
         &:focus {
             box-shadow: 0 0 0 2px var(--color-white);
@@ -35,32 +58,11 @@
         &:active {
             opacity: 0.8;
         }
-
-        @include mq("tablet") {
-            display: inline-block;
-            width: 100%;
-            padding: 20px;
-        }
     }
 
     &__link--active {
         color: var(--color-accent);
     }
 
-    @include mq("tablet") {
-        display: block;
-        position: fixed;
-        top: 64px;
-        right: -200%;
-        height: 100%;
-        width: 100%;
-        background-color: silver;
-        font-size: 32px;
-        overflow: auto;
-        transition: right 0.4s ease-in-out;
 
-        &.is-open {
-            right: 0px;
-        }
-    }
 }

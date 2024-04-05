@@ -1,6 +1,6 @@
 .recent-post {
     display: grid;
-    grid-template-columns: 95px 180px;
+    grid-template-columns: 95px auto;
     grid-template-rows: 50% auto;
     column-gap: 20px;
 

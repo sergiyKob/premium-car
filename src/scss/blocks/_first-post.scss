@@ -4,6 +4,11 @@
     &__img {
         border-radius: var(--rounded-md);
         margin-bottom: 20px;
+
+        @include mq('tablet-sm') {
+            width: 100%;
+        }
+
     }
 
     &__title {

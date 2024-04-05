@@ -5,9 +5,22 @@
         margin-bottom: 25px;
     }
 
+    &__list {
+        @include mq('tablet-sm') {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            overflow-x: auto;
+        }
+    }
+
     &__item {
         &:not(:last-child) {
             margin-bottom: 40px;
+
+            @include mq('tablet-sm') {
+                margin-bottom: 0;
+            }
         }
     }
 }

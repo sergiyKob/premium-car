@@ -12,6 +12,12 @@
     align-items: flex-start;
     position: relative;
 
+    @include mq('mobile') {
+        // width: 300px;
+        min-height: 300px;
+        padding: 15px;
+    }
+
     &:before {
         @include pseudo;
         left: 0;

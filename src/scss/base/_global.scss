@@ -36,7 +36,6 @@ body {
 
 .main {
     flex-grow: 1;
-    padding-top: 60px; // відступ на висоту фіксованого хедера
 }
 
 .sr-only {
@@ -237,10 +236,18 @@ body {
 
     &--md {
         font-size: 20px;
+
+        @include mq('mobile') {
+            font-size: 18px;
+        }
     }
 
     &--lg {
         font-size: 25px;
+
+        @include mq('mobile') {
+            font-size: 20px;
+        }
     }
 }
 

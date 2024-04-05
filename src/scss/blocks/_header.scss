@@ -7,6 +7,12 @@
         justify-content: space-between;
         gap: 15px;
         padding: 23px 0;
+
+        @include mq('tablet-sm') {
+            padding: 10px 0;
+        }
+
+        @include mq('mobile') {}
     }
 
     &__search {
@@ -19,6 +25,12 @@
         background-color: var(--color-black);
         border-radius: var(--rounded);
         transition: box-shadow var(--transition);
+
+        @include mq('tablet-sm') {
+            margin-left: auto;
+        }
+
+        @include mq('mobile') {}
 
         &:focus {
             box-shadow: 0 0 0 2px var(--color-white);

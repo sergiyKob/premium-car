@@ -4,17 +4,42 @@
         grid-template-columns: repeat(12, 1fr);
         gap: 30px;
         margin-bottom: 70px;
+
+        @include mq('tablet-sm') {
+            display: block;
+        }
     }
 
     &__wrapper {
         grid-column: span 8;
+
+        @include mq('tablet') {
+            grid-column: span 9;
+        }
+
+        @include mq('tablet-sm') {
+            margin-bottom: 30px;
+        }
+
+        @include mq('mobile') {
+            margin-bottom: 20px;
+        }
     }
 
     &__item {
         padding-bottom: 120px;
 
+        @include mq('mobile') {
+            padding-bottom: 55px;
+        }
+
         &:not(:last-child) {
             margin-bottom: 60px;
+
+            @include mq('tablet-sm') {
+                margin-bottom: 30px;
+
+            }
         }
     }
 
