@@ -21,8 +21,53 @@
         @include mq('mobile') {}
     }
 
+    &__link {
+        position: relative;
+        display: inline-block;
+        border-radius: var(--rounded);
+        background-color: var(--color-gray);
+
+        &::before {
+            @include pseudo;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-black-20);
+            border-radius: var(--rounded);
+            opacity: 0;
+            visibility: hidden;
+            transition:
+                opacity var(--transition),
+                box-shadow var(--transition),
+                visibility var(--transition);
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-dark);
+        }
+
+        @include hover {
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
     &__img {
         border-radius: var(--rounded);
+        transition: transform var(--transition);
+
+        @include mq('tablet-sm') {
+            width: 230px;
+        }
+
+        @include mq('mobile') {
+            width: 160px;
+        }
     }
 
     &__btn {

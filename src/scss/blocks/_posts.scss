@@ -14,10 +14,6 @@
     &__wrapper {
         grid-column: span 8;
 
-        @include mq('tablet') {
-            grid-column: span 9;
-        }
-
         @include mq('tablet-sm') {
             margin-bottom: 40px;
         }
@@ -50,5 +46,9 @@
 
     &__aside {
         grid-column: 10 / 13;
+
+        @include mq('tablet') {
+            grid-column: 9 / 13;
+        }
     }
 }

@@ -19,7 +19,7 @@
         border-radius: var(--rounded-md);
         background-color: var(--color-white);
 
-        @include mq('tablet-sm') {
+        @include mq('tablet') {
             padding: 20px;
         }
 

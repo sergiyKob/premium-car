@@ -7,6 +7,10 @@
     &__img {
         grid-row: span 2;
         border-radius: var(--rounded);
+
+        img {
+            border-radius: var(--rounded);
+        }
     }
 
     &__title {
