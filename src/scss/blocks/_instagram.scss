@@ -15,10 +15,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            gap: 15px;
         }
-
-        @include mq('mobile') {}
     }
 
     &__link {
@@ -67,6 +64,10 @@
 
         @include mq('mobile') {
             width: 160px;
+        }
+
+        @include mq('mobile-sm') {
+            width: 140px;
         }
     }
 

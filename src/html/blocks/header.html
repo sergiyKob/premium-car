@@ -26,10 +26,21 @@
             </nav>
 
             <button class="header__search btn" type="button">
-                <svg class="header__search-icon" width="16" height="17" aria-label="go to search">
+                <svg class="header__search-icon" width="16" height="17" aria-label="open search form">
                     <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
             </button>
+            <form class="form-search" action="#">
+                <label class="form-search__label">
+                    <input class="form-search__input" type="search" name="search" placeholder="Write your text" required>
+                </label>
+                <button class="form-search__btn btn" type="submit">
+                    <svg class="form-search__btn-icon" width="16" height="17" aria-label="go to search">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </form>
+
             @@include('burger.html')
         </div>
     </div>
